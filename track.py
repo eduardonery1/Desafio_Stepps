@@ -261,7 +261,7 @@ def run(
                                   (f'{id} {conf:.2f}' if hide_class else f'{id} {names[c]} {conf:.2f}'))
                               color = colors(c, True)
 
-                              if bbox_top <= im0.shape[0]//2 and (id not in ids_above_line):
+                              if bbox_top + bbox_h <= im0.shape[0]//2 and (id not in ids_above_line):
                                 ids_above_line.add(id)
                                 count += 1
 
